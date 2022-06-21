@@ -1,0 +1,39 @@
+
+#quizzInput {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+
+
+    
+    width: 95%;
+}
+
+
+#quizzNumberSelect {
+    display: none;
+}
+
+
+#slider {
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

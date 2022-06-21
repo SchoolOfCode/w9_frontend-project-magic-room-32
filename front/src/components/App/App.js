@@ -1,5 +1,6 @@
 import './App.css';
 import TopHeader from '../TopHeader/topHeader';
+import QuizzInput from '../QuizzInput/quizzInput';
 
 
 
@@ -10,6 +11,8 @@ function App() {
 
 
     <TopHeader />
+    <QuizzInput />
+    
   
 
 
