@@ -22,7 +22,7 @@ export default function EachWeek() {
         <button className="week14"> Week 14 </button>
         <button className="week15"> Week 15 </button>
         <button className="week16"> Week 16 </button>
-        <Buttons></Buttons>
+        
         </div>
     )
 }
