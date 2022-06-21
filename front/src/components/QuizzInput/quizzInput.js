@@ -11,7 +11,7 @@ export default function QuizzInput() {
     // number of quizz selected:
     const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
     const [correctAnswers, setCorrectAnswers] = useState(10);
-
+    const [quizzNumber, setQuizzNumber] = useState('1')
     
 
     
@@ -26,10 +26,6 @@ function handleSliderChange() {
     let sliderValue = document.querySelector('#slider').value;
 
     setCorrectAnswers(sliderValue);
-
-
-
-
 
 
 }
@@ -62,16 +58,73 @@ function handleSliderChange() {
 
 
 
+
+
+
+
+
+// submitting results:
+    async function submitResults() {
+
+        let radioSelected = document.querySelector('input[name="quizzNumber"]:checked').value;
+
+        setQuizzNumber(radioSelected);
+
+        console.log('correct answers: >>> ', correctAnswers);
+        console.log('radio selected: >>> ', radioSelected);
+
+
+
+
+
+        // fetch('/back end url', {
+        //     method: 'POST',
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //         quizzNumber: radioSelected,
+        //         correctAnswers: correctAnswers}),
+        // })
+
+        // .then(response => response.json())
+        // .then(data => console.log('data: >>>', data))
+        // .catch((err)=> {
+        //     console.log('error: ', err);
+        // })
+
+
+
+
+  
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (<div id='quizzInput'>
 <h2>Update Quizz results Week 4:</h2>
 
 
+
+{/* QUIZZ NUMBER radio buttons */}
 <p>Quizz Number:  
         
         <button onClick={handleQuizzNumberSelect}> Select Number</button>
         <div id='quizzNumberSelect'>
 
-            <input type='radio' value='1' name='quizzNumber'/>
+            <input type='radio' value='1' name='quizzNumber' />
             <label for='quizzNumber'>1</label>
 
             <input type='radio' value='2' name='quizzNumber'/>
@@ -88,6 +141,8 @@ function handleSliderChange() {
 
         </div>
 </p>
+
+<p>you selected quizz number: {quizzNumberSelected}</p>
 
 
 
@@ -106,7 +161,8 @@ function handleSliderChange() {
 </p>
 
 
-<input type="range" min="1" max="10" step='1'  class="slider" id="slider" default-value='0' onChange={handleSliderChange} />
+<input      type="range" min="1" max="10" step='1'  
+            class="slider" id="slider" default-value='0' onChange={handleSliderChange} />
 <p id='sliderValue'>Slider: {correctAnswers} </p>
 
 
@@ -114,7 +170,7 @@ function handleSliderChange() {
 
 
 
-<button>Submit</button>
+<button onClick={submitResults}>Submit</button>
 
     </div>)
 }
