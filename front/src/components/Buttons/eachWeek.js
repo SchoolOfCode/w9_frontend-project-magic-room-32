@@ -42,8 +42,8 @@ export default function EachWeek() {
 
     return (
         <div>
-            <h1>Week number: {weekNumber}</h1>
-            
+            <h1 >Week number: {weekNumber}</h1>
+            <div id="EachWeek">
             
             {
 
@@ -60,7 +60,7 @@ export default function EachWeek() {
            
 
             }
-
+</div>
         {/* <button onClick={() => Buttons} className="week1"> Week 1 </button>
         <button onClick={() => console.log("click")} className="week2"> Week 2 </button>
         <button className="week3"> Week 3 </button>

@@ -1,5 +1,9 @@
-/* Daily quiz buttons */
 
+h1 {
+    text-align: center;
+}
+
+/* Daily quiz buttons */
 .Monday{  
     background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
     background-color: #6d6d6d;
@@ -430,4 +434,13 @@
     font-family: Arial;
     font-size: 28px;
     padding: 10px 15px;
+    text-align: center;
+    
+}
+#EachWeek {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    width: 100%;
+    gap: 10px 25px;
 }

@@ -22,22 +22,22 @@ function WeeklyRecap() {
     return (<div>
         
         <h1>Weekend Recap</h1>
-        <button className="week1"> Week 1 Recap!</button>
-        <button className="week2"> Week 2 Recap!</button>
-        <button className="week3"> Week 3 Recap!</button>
-        <button className="week4"> Week 4 Recap!</button>
-        <button className="week5"> Week 5 Recap!</button>
-        <button className="week6"> Week 6 Recap!</button>
-        <button className="week7"> Week 7 Recap!</button>
-        <button className="week8"> Week 8 Recap!</button>
-        <button className="week9"> Week 9 Recap!</button>
-        <button className="week10"> Week 10 Recap!</button>
-        <button className="week11"> Week 11 Recap!</button>
-        <button className="week12"> Week 12 Recap!</button>
-        <button className="week13"> Week 13 Recap!</button>
-        <button className="week14"> Week 14 Recap!</button>
-        <button className="week15"> Week 15 Recap!</button>
-        <button className="week16"> Week 16 Recap!</button>
+        <button className="week1R"> Week 1 Recap!</button>
+        <button className="week2R"> Week 2 Recap!</button>
+        <button className="week3R"> Week 3 Recap!</button>
+        <button className="week4R"> Week 4 Recap!</button>
+        <button className="week5R"> Week 5 Recap!</button>
+        <button className="week6R"> Week 6 Recap!</button>
+        <button className="week7R"> Week 7 Recap!</button>
+        <button className="week8R"> Week 8 Recap!</button>
+        <button className="week9R"> Week 9 Recap!</button>
+        <button className="week10R"> Week 10 Recap!</button>
+        <button className="week11R"> Week 11 Recap!</button>
+        <button className="week12R"> Week 12 Recap!</button>
+        <button className="week13R"> Week 13 Recap!</button>
+        <button className="week14R"> Week 14 Recap!</button>
+        <button className="week15R"> Week 15 Recap!</button>
+        <button className="week16R"> Week 16 Recap!</button>
 
     </div>)
 }
