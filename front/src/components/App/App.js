@@ -21,7 +21,7 @@ function App() {
     
   
 
-    <h1>Dashboard</h1>
+ 
 
 <EachWeek></EachWeek>
 

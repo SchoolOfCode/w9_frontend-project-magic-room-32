@@ -114,7 +114,8 @@ function handleSliderChange() {
 
 
     return (<div id='quizzInput'>
-<h2>Update Quizz results Week 4:</h2>
+
+
 
 
 

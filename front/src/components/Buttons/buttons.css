@@ -415,3 +415,19 @@
     font-size: 28px;
     padding: 10px 15px;
 }
+
+
+
+
+
+.week {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
