@@ -1,3 +1,5 @@
+/* Daily quiz buttons */
+
 .Monday{  
     background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
     background-color: #6d6d6d;
@@ -53,6 +55,10 @@
     font-size: 28px;
     padding: 10px 15px;
 }
+
+/*Week by week buttons */
+
+
 .week1 {
     background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
     background-color: #6d6d6d;
@@ -219,6 +225,186 @@
     padding: 10px 15px;
 }
 .week16 {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+
+
+/* Week recap Buttons! */
+
+.week1R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week2R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week3R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week4R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week5R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week6R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week7R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week8R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week9R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week10R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week11R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week12R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week13R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week14R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week15R {
+    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
+    background-color: #6d6d6d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+}
+.week16R {
     background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
     background-color: #6d6d6d;
     border-radius: 14px;
