@@ -10,9 +10,29 @@ import {useState} from 'react';
 
 
 // component:
-export default function EachWeek() {
+export default function EachWeek({handleWeekClick}) {
 
     const [weekNumber, setWeekNumber] = useState('None');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     let weeks =[];
     for(let i=1; i<=16; i++) {
@@ -20,18 +40,25 @@ export default function EachWeek() {
     }
 
 
+// 🏀
+    // function handleWeekClick(event) {
+    //     let quizzInput= document.querySelector('#quizzInput');
+    //     quizzInput.style.display = 'flex';
+    //     console.log(event.target.id);
+    //     setWeekNumber(event.target.id);
+    // }
 
-    function handleWeekClick(event) {
-        let quizzInput= document.querySelector('#quizzInput');
-        quizzInput.style.display = 'flex';
-        console.log(event.target.id);
-        setWeekNumber(event.target.id);
-    }
 
+
+
+
+
+
+    
 
     return (
         <div>
-            <h1>Week number: {weekNumber}</h1>
+            {/* <h1>Week:  {weekNumber}</h1> */}
             <div id="EachWeek">
             
             {
