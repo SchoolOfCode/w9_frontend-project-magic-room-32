@@ -64,7 +64,7 @@ export default function QuizzInput({ week }) {
     // quizzInput.style.display = 'none';
   }
 
-  async function submitResults3() {
+  async function submitResultsDiary() {
     console.log("Diary submitted");
 
     fetch("http://localhost:3001/1", {
@@ -167,7 +167,7 @@ export default function QuizzInput({ week }) {
     Diary
     <input type="text"/>
   </label>
-  <button onClick={submitResults3} className="week">Submit</button>
+  <button onClick={submitResultsDiary} className="weekSubmit">Submit</button>
 
 
       <h1>Week: {week}</h1>
