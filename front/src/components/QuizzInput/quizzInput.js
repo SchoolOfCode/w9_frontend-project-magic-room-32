@@ -72,7 +72,10 @@ function handleSliderChange() {
             radioSelected = 1;
             setQuizzNumber(1);
         }
-        setQuizzNumber(radioSelected);
+        else {
+            setQuizzNumber(radioSelected);
+
+        }
 
         console.log('correct answers: >>> ', correctAnswers);
         console.log('radio selected: >>> ', radioSelected);
