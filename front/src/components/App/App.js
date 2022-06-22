@@ -5,7 +5,7 @@ import QuizzInput from '../QuizzInput/quizzInput';
 
 
 
-import Buttons from "../Buttons/buttons";
+
 import './App.css';
 import EachWeek from "../Buttons/eachWeek"
 

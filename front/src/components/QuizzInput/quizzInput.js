@@ -81,8 +81,9 @@ function handleSliderChange() {
 
 
 
-        fetch('/back end url', {
-            method: 'POST',
+        fetch('http://localhost:3001', {
+
+        method: 'POST',
             headers: {
                 "Content-Type": "application/json",
             },
