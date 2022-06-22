@@ -21,7 +21,7 @@
 
 
 #quizzNumberSelect {
-    display: none;
+    /* display: none; */
     align-items: center;
 }
 
@@ -37,8 +37,11 @@
 
 
 
-
-
+.boldFont {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(7, 215, 223);
+}
 
 
 

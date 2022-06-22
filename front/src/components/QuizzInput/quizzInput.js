@@ -1,7 +1,5 @@
 
 import './quizzInput.css';
-import EachWeek from '../Buttons/eachWeek';
-
 import { useState} from 'react';
 
 
@@ -17,10 +15,14 @@ import { useState} from 'react';
 
 
 
-export default function QuizzInput() {
+export default function QuizzInput({week}) {
+
+    let weekdays = ['Monday', 'Tuesday','Wednesday', 'Thursday','Friday'];
+
 
     // number of quizz selected:
     const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
+
     const [correctAnswers, setCorrectAnswers] = useState(10);
 
 
@@ -110,21 +112,13 @@ function  handleRadioChange(event) {
     async function submitResults() {
 
 
-        // testing no radio inputs:
-
-
-        console.log('testing no radio inputs: >>>');
-
-
-        // console.log(typeof document.querySelector('input[name="quizzNumber"]:checked').value);
-        // console.log(document.querySelector('input[name="quizzNumber"]:checked').value);
-        
-        console.log('quiz radio on submit: >>> ', quizzNumberRadio);
+        console.log('week selected: >>>>> inside quizzInput' , week);
+        console.log('quiz number radio on submit: >>> ', quizzNumberRadio);
         console.log('quiz slider on submit: >>> ', correctAnswers);
 
 
 
-        console.log('finished testing no radio inputs');
+
 
 
 
@@ -138,25 +132,7 @@ function  handleRadioChange(event) {
 
     
 
-        // let radioSelected = document.querySelector('input[name="quizzNumber"]:checked').value;
-
-        // if(radioSelected >= 1 && radioSelected <=5) {
-        //     alert(`you chose ${radioSelected}`);
-        // }
-        // else {
-        //     alert('no radio selected')
-        //     radioSelected = 1;
-
-        // }
-
-        
-        // setQuizzNumber(radioSelected);
-   
-        
-   
-
-        // console.log('correct answers: >>> ', correctAnswers);
-        // console.log('radio selected: >>> ', quizzNumber);
+    
 
 
 
@@ -169,8 +145,9 @@ function  handleRadioChange(event) {
         //         "Content-Type": "application/json",
         //     },
         //     body: JSON.stringify({
-        //         quizzNumber: radioSelected,
-        //         correctAnswers: correctAnswers}),
+        //         quizzNumber: quizzNumberRadio,
+        //         correctAnswers: correctAnswers,
+        //         weekNumber: 1}),
         // })
 
         // .then(response => response.json())
@@ -180,8 +157,10 @@ function  handleRadioChange(event) {
         // })
 
 
-
-
+        let quizzInput= document.querySelector('#quizzInput');
+        // quizzInput.style.display = 'none';
+        
+        
   
         
     }
@@ -199,49 +178,53 @@ function  handleRadioChange(event) {
 
 
 
-    return (<div id='quizzInput'>
+    return (
+    
+
+    <div id='quizzInput'>
+
+  
 
 
 
 
 
 {/* QUIZZ NUMBER radio buttons */}
-<p>Quizz Number:  
+<p><span className='boldFont'> {quizzNumberRadio?  weekdays[quizzNumberRadio-1] : ''}</span>
         
-        <button onClick={handleQuizzNumberSelect}> Select Number</button>
+        {/* <button onClick={handleQuizzNumberSelect}> Select Number</button> */}
         <div id='quizzNumberSelect'>
 
             <input type='radio' value='1' id='1'  name='quizzNumber' onChange={handleRadioChange} />
-            <label for='quizzNumber'>1</label>
+            <label for='quizzNumber'>Monday</label>
 
             <input type='radio' value='2' id ='2' name='quizzNumber' onChange={handleRadioChange}/>
-            <label for='quizzNumber'>2</label>
+            <label for='quizzNumber'>Tuesday</label>
 
             <input type='radio' value='3' id='3' name='quizzNumber' onChange={handleRadioChange}/>
-            <label for='quizzNumber'>3</label>
+            <label for='quizzNumber'>Wednesday</label>
 
             <input type='radio' value='4'  id='4' name='quizzNumber' onChange={handleRadioChange}/>
-            <label for='quizzNumber'>4</label>
+            <label for='quizzNumber'>Thursday</label>
 
             <input type='radio' value='5'  id='5' name='quizzNumber' onChange={handleRadioChange}/>
-            <label for='quizzNumber'>5</label>
+            <label for='quizzNumber'>Friday</label>
 
         </div>
 </p>
 
-<p>you selected quizz number: {quizzNumberSelected}</p>
+
+
+
+
+
+{/* <p>you selected quizz number:</p> */}
 
 
 
 
 {/* SLIDER selector:  */}
-<p>Number of Correct Answers: 
-
-    
-
-
-
-    
+<p>Correct Answers:   <span className='boldFont'>{correctAnswers}</span>
 
 
 
@@ -250,7 +233,8 @@ function  handleRadioChange(event) {
 
 <input      type="range" min="1" max="10" step='1'  
             class="slider" id="slider" default-value='0' onChange={handleSliderChange} />
-<p id='sliderValue'>Slider: {correctAnswers} </p>
+
+
 
 
 
@@ -258,8 +242,16 @@ function  handleRadioChange(event) {
 
 
 <button onClick={submitResults}>Submit</button>
+<hr />
 
-    </div>)
+<h1>Week: {week}</h1>
+
+
+
+
+</div>
+
+)
 }
 
 

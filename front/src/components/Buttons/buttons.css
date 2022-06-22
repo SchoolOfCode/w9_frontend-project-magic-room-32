@@ -424,19 +424,10 @@ h1 {
 
 
 
-.week {
-    background: linear-gradient(to bottom, #6d6d6d 5%, #535353 100%);
-    background-color: #6d6d6d;
-    border-radius: 14px;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 28px;
-    padding: 10px 15px;
-    text-align: center;
-    
-}
+
+
+
+
 #EachWeek {
     
     display: grid;
@@ -444,3 +435,37 @@ h1 {
     width: 100%;
     gap: 10px 25px;
 }
+
+
+
+
+
+
+
+
+.week {
+    background: linear-gradient(to bottom, #05bcf3 5%, #535353 100%);
+    background-color: #6d6d6d;
+    color: #ffffff;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+    text-align: center;
+    
+}
+
+
+
+
+.week:hover {
+
+
+    background: linear-gradient(to bottom, rgb(206, 1, 233) 5%, #535353 100%);
+    
+}
+
+
+
