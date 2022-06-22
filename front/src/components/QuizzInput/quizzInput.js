@@ -1,5 +1,6 @@
 
 import './quizzInput.css';
+import EachWeek from '../Buttons/eachWeek';
 
 import { useState} from 'react';
 
@@ -67,7 +68,10 @@ function handleSliderChange() {
     async function submitResults() {
 
         let radioSelected = document.querySelector('input[name="quizzNumber"]:checked').value;
-
+        if(radioSelected == null) {
+            radioSelected = 1;
+            setQuizzNumber(1);
+        }
         setQuizzNumber(radioSelected);
 
         console.log('correct answers: >>> ', correctAnswers);
@@ -77,21 +81,21 @@ function handleSliderChange() {
 
 
 
-        // fetch('/back end url', {
-        //     method: 'POST',
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         quizzNumber: radioSelected,
-        //         correctAnswers: correctAnswers}),
-        // })
+        fetch('/back end url', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                quizzNumber: radioSelected,
+                correctAnswers: correctAnswers}),
+        })
 
-        // .then(response => response.json())
-        // .then(data => console.log('data: >>>', data))
-        // .catch((err)=> {
-        //     console.log('error: ', err);
-        // })
+        .then(response => response.json())
+        .then(data => console.log('data: >>>', data))
+        .catch((err)=> {
+            console.log('error: ', err);
+        })
 
 
 

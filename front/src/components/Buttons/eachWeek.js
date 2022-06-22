@@ -10,7 +10,7 @@ import {useState} from 'react';
 
 
 
-
+// component:
 export default function EachWeek() {
 
     const [weekNumber, setWeekNumber] = useState('None');
