@@ -1,6 +1,11 @@
 import "./quizzInput.css";
 import { useState } from "react";
 
+import Chart from "../Chart/Chart";
+
+
+
+
 export default function QuizzInput({ week }) {
   let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
@@ -19,6 +24,12 @@ export default function QuizzInput({ week }) {
     setCorrectAnswers(sliderValue);
   }
 
+
+
+
+
+
+
   // handle quizz number selection
   function handleQuizzNumberSelect() {
     let dropDownQuizzSelect = document.querySelector("#quizzNumberSelect");
@@ -32,10 +43,28 @@ export default function QuizzInput({ week }) {
     }
   }
 
+
+
+
+
+
+
+
+
   // 🏀✅
   function handleRadioChange(event) {
     setQuizzNumberRadio(event.target.id);
   }
+
+
+
+
+
+
+
+
+
+
 
   // submitting results: 🏀
   async function submitResults() {
@@ -43,29 +72,63 @@ export default function QuizzInput({ week }) {
     console.log("quiz number radio on submit: >>> ", quizzNumberRadio);
     console.log("quiz slider on submit: >>> ", correctAnswers);
 
-    fetch("http://localhost:3001/1", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        quizNumber: Number(quizzNumberRadio),
-        correctAnswers: correctAnswers,
-        weekNumber: week,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log("data: >>>", data))
-      .catch((err) => {
-        console.log("error: ", err);
-      });
+
+
+
+
+
+    // fetch("http://localhost:3001/1", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     quizNumber: Number(quizzNumberRadio),
+    //     correctAnswers: correctAnswers,
+    //     weekNumber: week,
+    //   }),
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => console.log("data: >>>", data))
+    //   .catch((err) => {
+    //     console.log("error: ", err);
+    //   });
+      
+
+
+
+
+
+
+
 
     let quizzInput = document.querySelector("#quizzInput");
     // quizzInput.style.display = 'none';
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div id="quizzInput">
+
+
+    <Chart weekNumber={week} answers = {correctAnswers} />
+
+
+    
       {/* QUIZZ NUMBER radio buttons */}
       <p>
         <span className="boldFont">
