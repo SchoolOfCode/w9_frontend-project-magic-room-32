@@ -7,12 +7,25 @@ import { useState} from 'react';
 
 
 
+
+
+
+
+
+
+
+
+
+
 export default function QuizzInput() {
 
     // number of quizz selected:
     const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
     const [correctAnswers, setCorrectAnswers] = useState(10);
-    const [quizzNumber, setQuizzNumber] = useState('1')
+
+
+    // radio button:  🏀✅
+    const [quizzNumberRadio, setQuizzNumberRadio] = useState('1');
     
 
     
@@ -64,42 +77,107 @@ function handleSliderChange() {
 
 
 
-// submitting results:
+
+
+
+// 🏀✅
+function  handleRadioChange(event) {
+ 
+    setQuizzNumberRadio(event.target.id);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// submitting results: 🏀
     async function submitResults() {
 
-        let radioSelected = document.querySelector('input[name="quizzNumber"]:checked').value;
-        if(radioSelected == null) {
-            radioSelected = 1;
-            setQuizzNumber(1);
-        }
-        else {
-            setQuizzNumber(radioSelected);
 
-        }
-
-        console.log('correct answers: >>> ', correctAnswers);
-        console.log('radio selected: >>> ', radioSelected);
+        // testing no radio inputs:
 
 
+        console.log('testing no radio inputs: >>>');
+
+
+        // console.log(typeof document.querySelector('input[name="quizzNumber"]:checked').value);
+        // console.log(document.querySelector('input[name="quizzNumber"]:checked').value);
+        
+        console.log('quiz radio on submit: >>> ', quizzNumberRadio);
+        console.log('quiz slider on submit: >>> ', correctAnswers);
 
 
 
-        fetch('http://localhost:3001', {
+        console.log('finished testing no radio inputs');
 
-        method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                quizzNumber: radioSelected,
-                correctAnswers: correctAnswers}),
-        })
 
-        .then(response => response.json())
-        .then(data => console.log('data: >>>', data))
-        .catch((err)=> {
-            console.log('error: ', err);
-        })
+
+
+
+
+
+
+
+
+
+    
+
+        // let radioSelected = document.querySelector('input[name="quizzNumber"]:checked').value;
+
+        // if(radioSelected >= 1 && radioSelected <=5) {
+        //     alert(`you chose ${radioSelected}`);
+        // }
+        // else {
+        //     alert('no radio selected')
+        //     radioSelected = 1;
+
+        // }
+
+        
+        // setQuizzNumber(radioSelected);
+   
+        
+   
+
+        // console.log('correct answers: >>> ', correctAnswers);
+        // console.log('radio selected: >>> ', quizzNumber);
+
+
+
+
+
+        // fetch('http://localhost:3001', {
+
+        // method: 'POST',
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //         quizzNumber: radioSelected,
+        //         correctAnswers: correctAnswers}),
+        // })
+
+        // .then(response => response.json())
+        // .then(data => console.log('data: >>>', data))
+        // .catch((err)=> {
+        //     console.log('error: ', err);
+        // })
 
 
 
@@ -133,19 +211,19 @@ function handleSliderChange() {
         <button onClick={handleQuizzNumberSelect}> Select Number</button>
         <div id='quizzNumberSelect'>
 
-            <input type='radio' value='1' name='quizzNumber' />
+            <input type='radio' value='1' id='1'  name='quizzNumber' onChange={handleRadioChange} />
             <label for='quizzNumber'>1</label>
 
-            <input type='radio' value='2' name='quizzNumber'/>
+            <input type='radio' value='2' id ='2' name='quizzNumber' onChange={handleRadioChange}/>
             <label for='quizzNumber'>2</label>
 
-            <input type='radio' value='3' name='quizzNumber'/>
+            <input type='radio' value='3' id='3' name='quizzNumber' onChange={handleRadioChange}/>
             <label for='quizzNumber'>3</label>
 
-            <input type='radio' value='4' name='quizzNumber'/>
+            <input type='radio' value='4'  id='4' name='quizzNumber' onChange={handleRadioChange}/>
             <label for='quizzNumber'>4</label>
 
-            <input type='radio' value='5' name='quizzNumber'/>
+            <input type='radio' value='5'  id='5' name='quizzNumber' onChange={handleRadioChange}/>
             <label for='quizzNumber'>5</label>
 
         </div>
