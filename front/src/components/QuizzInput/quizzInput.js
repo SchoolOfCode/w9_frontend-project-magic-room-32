@@ -64,6 +64,25 @@ export default function QuizzInput({ week }) {
     // quizzInput.style.display = 'none';
   }
 
+  async function submitResults3() {
+    console.log("Diary submitted");
+
+    fetch("http://localhost:3001/1", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        Diary: String,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("data: >>>", data))
+      .catch((err) => {
+        console.log("error: ", err);
+      });
+    }
+
   return (
     <div id="quizzInput">
       {/* QUIZZ NUMBER radio buttons */}
@@ -143,7 +162,15 @@ export default function QuizzInput({ week }) {
       <button onClick={submitResults}>Submit</button>
       <hr />
 
+      
+  <label>
+    Diary
+    <input type="text"/>
+  </label>
+  <button onClick={submitResults3} className="week">Submit</button>
+
+
       <h1>Week: {week}</h1>
     </div>
   );
-}
+  }
