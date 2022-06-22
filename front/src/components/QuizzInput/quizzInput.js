@@ -77,21 +77,21 @@ function handleSliderChange() {
 
 
 
-        // fetch('/back end url', {
-        //     method: 'POST',
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         quizzNumber: radioSelected,
-        //         correctAnswers: correctAnswers}),
-        // })
+        fetch('http://localhost:3001', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                quizzNumber: radioSelected,
+                correctAnswers: correctAnswers}),
+        })
 
-        // .then(response => response.json())
-        // .then(data => console.log('data: >>>', data))
-        // .catch((err)=> {
-        //     console.log('error: ', err);
-        // })
+        .then(response => response.json())
+        .then(data => console.log('data: >>>', data))
+        .catch((err)=> {
+            console.log('error: ', err);
+        })
 
 
 
