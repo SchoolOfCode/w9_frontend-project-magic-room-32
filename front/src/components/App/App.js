@@ -23,8 +23,8 @@ function App() {
 
     
 
-    // event.target.style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #535353 100%)';
-    document.querySelector('.week').style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #535353 100%)';
+    // event.target.style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)';
+    document.querySelector('.week').style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)';
 
 
 
