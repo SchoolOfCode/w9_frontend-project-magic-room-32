@@ -1,13 +1,8 @@
 import React from "react";
 import "./buttons.css";
-import Buttons from "./buttons";
+
 
 import {useState} from 'react';
-
-
-
-
-
 
 
 
@@ -22,12 +17,6 @@ export default function EachWeek() {
 
 
 
-
-
-
-
-
-
     function handleWeekClick(event) {
         let quizzInput= document.querySelector('#quizzInput');
         quizzInput.style.display = 'flex';
@@ -36,13 +25,9 @@ export default function EachWeek() {
     }
 
 
-
-
-
-
     return (
         <div>
-            <h1 >Week number: {weekNumber}</h1>
+            <h1>Week number: {weekNumber}</h1>
             <div id="EachWeek">
             
             {
