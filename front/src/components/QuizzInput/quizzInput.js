@@ -147,7 +147,7 @@ function  handleRadioChange(event) {
         //     body: JSON.stringify({
         //         quizzNumber: quizzNumberRadio,
         //         correctAnswers: correctAnswers,
-        //         weekNumber: 1}),
+        //         weekNumber: week}),
         // })
 
         // .then(response => response.json())
