@@ -3,6 +3,8 @@ import {Bar} from 'react-chartjs-2';
 import { Chart as ChartJS} from 'chart.js/auto'
 
 
+
+
 // fake data:
 import { dataUser } from './dataChart.js'
 
@@ -57,6 +59,9 @@ export default function BarChart({weekNumber}) {
 
 <h1>Quiz results for Week {weekNumber}</h1>
 
+
+
+
     <Bar 
         data ={
             {
@@ -73,6 +78,9 @@ export default function BarChart({weekNumber}) {
 
 </div>
 <hr/>
+
+
+
 
 
     </div>)
