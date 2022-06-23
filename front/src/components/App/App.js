@@ -3,8 +3,7 @@ import './App.css';
 import {useState} from 'react';
 import TopHeader from '../TopHeader/topHeader';
 import QuizzInput from '../QuizzInput/quizzInput';
-
-
+ 
 
 
 import './App.css';

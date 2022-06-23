@@ -64,7 +64,7 @@ export default function QuizzInput({ week }) {
     // quizzInput.style.display = 'none';
   }
 
-  async function submitResultsDiary() {
+  async function submitDiaryResults() {
     console.log("Diary submitted");
 
     fetch("http://localhost:3001/1", {
@@ -73,7 +73,10 @@ export default function QuizzInput({ week }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        Diary: String,
+        quizNumber: Number(quizzNumberRadio),
+        correctAnswers: correctAnswers,
+        weekNumber: week,
+        
       }),
     })
       .then((response) => response.json())
@@ -165,9 +168,11 @@ export default function QuizzInput({ week }) {
       
   <label>
     Diary
-    <input type="text"/>
+    <input type="text" placeholder="add a comment"/>
   </label>
-  <button onClick={submitResultsDiary} className="weekSubmit">Submit</button>
+  <button onClick={submitDiaryResults} className="diary" id="diary">Submit</button>
+
+  <form>Show the comment down here somehow</form>
 
 
       <h1>Week: {week}</h1>
