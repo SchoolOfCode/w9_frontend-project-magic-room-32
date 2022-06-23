@@ -12,7 +12,7 @@ import { getDataByWeekNumber } from "./helperFunctions.js";
 let correctAll;
 
 export default function BarChart({ weekNumber }) {
-  console.log("inside bar chart comp");
+  // console.log("inside bar chart comp");
 
   correctAll = getDataByWeekNumber(weekNumber, dataUser);
 

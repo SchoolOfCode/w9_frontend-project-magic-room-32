@@ -1,12 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
 
-function DiaryDisplay({ diary, getDiary }) {
-  getDiary();
+function DiaryDisplay({ week, diary, getDiary }) {
+  useEffect(() => {
+    getDiary();
+  }, [week]);
   return (
     <div>
-      <p>diary here:</p>
-      <p>{diary}</p>
-      {/* <button onclick={getDiary(diary)}>Generate Diary</button> */}
+      <p>"{diary}"</p>
     </div>
   );
 }

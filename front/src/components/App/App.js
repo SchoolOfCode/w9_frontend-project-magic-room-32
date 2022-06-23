@@ -9,7 +9,7 @@ import DiaryInput from "../Diary/Input";
 import DiaryDisplay from "../Diary/DiaryDisplay";
 
 function App() {
-  const [week, setWeek] = useState(1);
+  const [week, setWeek] = useState(0);
   const [diary, setDiary] = useState("");
 
   // WEEK BUTTONS:🏀
@@ -20,8 +20,8 @@ function App() {
 
     let quizzInput = document.querySelector("#quizzInput");
     quizzInput.style.display = "flex";
-
     setWeek(event.target.id);
+    console.log(`User has clicked Week Number ${week}`);
 
     // HIGHLIGHTING BUTTON:
   }
@@ -41,10 +41,12 @@ function App() {
   async function getDiary() {
     let response = await fetch(`http://localhost:3001/diary/${week}`);
     let data = await response.json();
-    let diaryDat = data.payload[0].diary;
-    console.log(diaryDat);
-    setDiary(diaryDat);
-    return diary;
+    console.log(data);
+    if (data.payload[0] === undefined) {
+      setDiary(`Please submit an entry for week ${week}`);
+    } else {
+      setDiary(data.payload[0].diary);
+    }
   }
 
   async function submitDiary(e) {
@@ -61,7 +63,7 @@ function App() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log("data: >>>", data))
+      .then((data) => console.log("data: >>>", data.payload))
       .catch((err) => {
         console.log("error: ", err);
       });
@@ -72,7 +74,7 @@ function App() {
       <TopHeader />
       <QuizzInput week={week} />
       <DiaryInput submitDiary={submitDiary}></DiaryInput>
-      <DiaryDisplay diary={diary} getDiary={getDiary} />
+      <DiaryDisplay week={week} diary={diary} getDiary={getDiary} />
       <EachWeek handleWeekClick={handleWeekClick} />
     </div>
   );
