@@ -38,17 +38,17 @@ function App() {
     displayDiary();
   }, []);
 
-  async function submitDiary({ e, week, text }) {
+  async function submitDiary(e) {
     e.preventDefault();
-
-    fetch(`http://localhost:3001/diary/16`, {
+    let inputValue = document.querySelector("#input-diary").value;
+    fetch(`http://localhost:3001/diary/${week}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         weekNumber: week,
-        diaryText: { text },
+        diaryText: inputValue,
       }),
     })
       .then((response) => response.json())

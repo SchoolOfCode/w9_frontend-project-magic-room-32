@@ -7,6 +7,7 @@ const DiaryInput = ({ submitDiary }) => {
       <form onSubmit={submitDiary}>
         <label>My Diary</label>
         <input
+          id="input-diary"
           type="text"
           required
           value={text}
