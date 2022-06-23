@@ -10,6 +10,8 @@ import { dataUser } from './dataChart.js'
 import {getDataByWeekNumber} from './helperFunctions.js';
 
 
+// to store correct per week in ARRAY:
+let correctAll ;
 
 
 
@@ -22,7 +24,18 @@ export default function BarChart({weekNumber}) {
 
     console.log('inside bar chart comp');
 
+    correctAll= getDataByWeekNumber(weekNumber, dataUser);
 
+
+
+
+
+
+
+
+
+
+    // ✅
     let daysInWek = ['Monday', 'Tuesday','Wednesday','Thursday','Friday'];
 
 
@@ -50,7 +63,7 @@ export default function BarChart({weekNumber}) {
                 labels: daysInWek, 
                 datasets: [{
                     label: 'Weekly Quiz Results',
-                    data: [1,2,3,5,8,3]
+                    data: correctAll
                 }]
                 }
                 }
