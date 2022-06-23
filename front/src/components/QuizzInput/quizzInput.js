@@ -77,6 +77,7 @@ export default function QuizzInput({ week }) {
 
 
 
+
     // fetch("http://localhost:3001/1", {
     //   method: "POST",
     //   headers: {
@@ -100,6 +101,25 @@ export default function QuizzInput({ week }) {
 
 
 
+
+
+    fetch(`http://localhost:3001/week/${week}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        session: "XXXXXX",
+      },
+      body: JSON.stringify({
+        quizNumber: Number(quizzNumberRadio),
+        correctAnswers: correctAnswers,
+        weekNumber: week,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log("data: >>>", data))
+      .catch((err) => {
+        console.log("error: ", err);
+      });
 
 
     let quizzInput = document.querySelector("#quizzInput");

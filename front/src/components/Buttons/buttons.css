@@ -444,7 +444,7 @@ h1 {
 
 
 .week {
-    background: linear-gradient(to bottom, #05bcf3 5%, #535353 100%);
+    background: linear-gradient(to bottom, #05bcf3 5%, #003aa5 100%);
     background-color: #6d6d6d;
     color: #ffffff;
     border-radius: 14px;
@@ -456,14 +456,25 @@ h1 {
     text-align: center;
     
 }
-
+.weekSubmit {
+    background: linear-gradient(to bottom, #05bcf3 5%, #003aa5 100%);
+    background-color: #6d6d6d;
+    color: #ffffff;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 28px;
+    padding: 10px 15px;
+    text-align: center;
+}
 
 
 
 .week:hover {
 
 
-    background: linear-gradient(to bottom, rgb(206, 1, 233) 5%, #535353 100%);
+    background: linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%);
     
 }
 
