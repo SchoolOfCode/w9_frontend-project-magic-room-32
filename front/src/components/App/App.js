@@ -10,7 +10,7 @@ import DiaryDisplay from "../Diary/DiaryDisplay";
 
 function App() {
   const [week, setWeek] = useState(1);
-  // const [diaries, setDiaries] = useState("");
+  const [diary, setDiary] = useState("");
 
   // WEEK BUTTONS:🏀
   function handleWeekClick(event) {
@@ -40,8 +40,10 @@ function App() {
 
   async function getDiary() {
     let response = await fetch(`http://localhost:3001/diary/${week}`);
-    let diary = await response.json();
-    console.log(diary);
+    let data = await response.json();
+    let diaryDat = data.payload[0].diary;
+    console.log(diaryDat);
+    setDiary(diaryDat);
     return diary;
   }
 
@@ -70,7 +72,7 @@ function App() {
       <TopHeader />
       <QuizzInput week={week} />
       <DiaryInput submitDiary={submitDiary}></DiaryInput>
-      <DiaryDisplay getDiary={getDiary} />
+      <DiaryDisplay diary={diary} getDiary={getDiary} />
       <EachWeek handleWeekClick={handleWeekClick} />
     </div>
   );
