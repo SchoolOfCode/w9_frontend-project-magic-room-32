@@ -125,7 +125,7 @@ export default function QuizzInput({ week }) {
     <div id="quizzInput">
 
 
-    <Chart weekNumber={week} answers = {correctAnswers} />
+    <Chart weekNumber={week}  />
 
 
     
@@ -204,7 +204,7 @@ export default function QuizzInput({ week }) {
       />
 
       <button onClick={submitResults}>Submit</button>
-      <hr />
+   
 
       <h1>Week: {week}</h1>
     </div>

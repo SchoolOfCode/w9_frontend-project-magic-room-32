@@ -27,6 +27,12 @@
 
 
 
+hr {
+    width: 100%;
+    border: dashed rgb(219, 162, 162) 3px;
+}
+
+
 
 
 

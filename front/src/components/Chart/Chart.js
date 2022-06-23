@@ -1,30 +1,60 @@
 import './chart.css';
-import { Doughnut } from 'react-chartjs-2'
+import {useState } from 'react'
+import { Bar } from 'react-chartjs-2';
+import { Chart as chartJS } from 'chart.js';
 
-export default function Chart({weekNumber, answers}) {
+import { data } from './dataChart';
 
+import {getDataByWeekNumber } from './helperFunctions.js'
 
-
-
-
-    return (<div id='chartMainContainer'>
-<h1>Chart Quiz Results {weekNumber}</h1>
-
-<div id='chartContainer'>
-
-<div className="chart"></div>
-<div className="chart"></div>
-<div className="chart"></div>
-<div className="chart"></div>
-<div className="chart"></div>
+let dataByWeek;
 
 
 
-<Doughnut data={} />
 
 
 
-</div>
+export default function Chart({weekNumber}) {
 
+
+
+
+    // const [dataByWeek, setDataByWeek] = useState(getDataByWeekNumber(weekNumber, data));
+
+    dataByWeek = getDataByWeekNumber(weekNumber, data);
+
+
+
+
+
+
+
+
+    return (<div id='chartMainContainer' >
+<h1>CHART Quiz Results for week number: {weekNumber}</h1>
+
+{
+    dataByWeek.map((elem)=> {
+        return (
+            <>
+
+            <p>week number: {elem.weekNumber} , test number: {elem.testNumber}, correct: {elem.correct} </p>
+       
+            
+            
+            </>
+            )
+    })
+}
+
+
+
+
+
+
+
+
+
+<hr />
     </div>)
 }
