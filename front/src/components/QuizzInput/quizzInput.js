@@ -43,10 +43,11 @@ export default function QuizzInput({ week }) {
     console.log("quiz number radio on submit: >>> ", quizzNumberRadio);
     console.log("quiz slider on submit: >>> ", correctAnswers);
 
-    fetch("http://localhost:3001/1", {
+    fetch(`http://localhost:3001/week/${week}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        session: "XXXXXX",
       },
       body: JSON.stringify({
         quizNumber: Number(quizzNumberRadio),
@@ -146,4 +147,4 @@ export default function QuizzInput({ week }) {
       <h1>Week: {week}</h1>
     </div>
   );
-  }
+}
