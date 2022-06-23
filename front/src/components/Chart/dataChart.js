@@ -1,6 +1,6 @@
 
 
-export const data = [
+export const dataUser = [
     {
         weekNumber: 1,
         testNumber: 1,

@@ -1,9 +1,9 @@
 import "./quizzInput.css";
 import { useState } from "react";
 
-import Chart from "../Chart/Chart";
 
 
+import BarChart from "../Chart/Chart";
 
 
 export default function QuizzInput({ week }) {
@@ -125,7 +125,12 @@ export default function QuizzInput({ week }) {
     <div id="quizzInput">
 
 
-    <Chart weekNumber={week}  />
+
+{/* 🏀 */}
+  <BarChart weekNumber={week}/>
+
+
+
 
 
     
