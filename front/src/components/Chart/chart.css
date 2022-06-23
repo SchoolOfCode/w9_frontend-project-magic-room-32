@@ -1,0 +1,52 @@
+
+
+
+.chart {
+    background-color: rgb(139, 139, 139);
+    width: 30px;
+    height: 60px;
+    margin: 0 7px;
+}
+
+
+#chartContainer {
+
+    display: flex;
+    flex-direction: row;
+
+ 
+}
+
+#chartMainContainer {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+
+hr {
+    width: 100%;
+    border: dashed rgb(219, 162, 162) 3px;
+}
+
+
+
+
+#animatedHeader {
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

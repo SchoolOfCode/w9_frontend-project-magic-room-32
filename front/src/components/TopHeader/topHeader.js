@@ -2,6 +2,9 @@
 import "./topHeader.css";
 import topHeaderIMG from './media/TopHeader.jpg';
 
+import animatedTopHeader from '../TopHeader/media/FinalCut/TopHeaderBLANK.gif';
+
+
 
 export default function TopHeader() {
 
@@ -14,7 +17,9 @@ export default function TopHeader() {
 
 
 
-<img id="imgTopHeader" src={topHeaderIMG} alt={'top header'}  />
+{/* <img id="imgTopHeader" src={topHeaderIMG} alt={'top header'}  /> */}
+
+<img id="imgTopHeader" src={animatedTopHeader} alt={'top header'}  />
 
 
 
