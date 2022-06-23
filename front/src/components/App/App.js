@@ -6,11 +6,12 @@ import QuizzInput from "../QuizzInput/quizzInput";
 import "./App.css";
 import EachWeek from "../Buttons/eachWeek";
 import DiaryInput from "../DiaryList/Input";
-import DiaryList from "../DiaryList/diaryList";
+// import DiaryList from "../DiaryList/diaryList";
+import RenderDiary from "../DiaryList/diaryDisplay";
 
 function App() {
   const [week, setWeek] = useState(1);
-  const [diaries, setDiaries] = useState();
+  const [diary, setDiary] = useState("");
 
   // WEEK BUTTONS:🏀
   function handleWeekClick(event) {
@@ -26,17 +27,23 @@ function App() {
     // HIGHLIGHTING BUTTON:
   }
 
-  useEffect(() => {
-    async function displayDiary() {
-      fetch(`http://localhost:3001/diary/${week}`)
-        .then((response) => response.json())
-        .then((data) => setDiaries(data))
-        .catch((err) => {
-          console.log("error: ", err);
-        });
-    }
-    displayDiary();
-  }, []);
+  // useEffect(() => {
+  //   async function displayDiary() {
+  //     fetch(`http://localhost:3001/diary/${week}`)
+  //       .then((response) => response.json())
+  //       .then((data) => setDiaries(data))
+  //       .catch((err) => {
+  //         console.log("error: ", err);
+  //       });
+  //   }
+  //   displayDiary();
+  // }, []);
+
+    // function handleDelete(id) {
+  //   const newList = diaries.filter((diary) => diary.id != id);
+  //   setDiaries(newList);
+  //   // delete req
+  // }
 
   async function submitDiary(e) {
     e.preventDefault();
@@ -58,23 +65,23 @@ function App() {
       });
   }
 
-  function handleDelete(id) {
-    const newList = diaries.filter((diary) => diary.id != id);
-    setDiaries(newList);
-    // delete req
-  }
+  async function getDiary() {
+    let response = await fetch(`http://localhost:3001/diary/${week}`);
+    let data = await response.json();
+    console.log(data);
+}
 
   return (
     <div className="App">
       <TopHeader />
-
       <QuizzInput week={week} />
       <DiaryInput submitDiary={submitDiary}></DiaryInput>
       {/* diaries && <DiaryList handleDelete={handleDelete} /> */}
       {/* 🏀 */}
+      <RenderDiary diary = {diary} getDiary = {getDiary}/>
       <EachWeek handleWeekClick={handleWeekClick} />
     </div>
-  );
-}
+    );
+  }
 
 export default App;
