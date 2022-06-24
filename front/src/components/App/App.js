@@ -5,12 +5,12 @@ import QuizzInput from "../QuizzInput/quizzInput";
 
 import "./App.css";
 import EachWeek from "../Buttons/eachWeek";
-import DiaryInput from "../DiaryList/Input";
-import DiaryList from "../DiaryList/diaryList";
+import DiaryInput from "../Diary/Input";
+import DiaryDisplay from "../Diary/DiaryDisplay";
 
 function App() {
-  const [week, setWeek] = useState(1);
-  const [diaries, setDiaries] = useState();
+  const [week, setWeek] = useState(0);
+  const [diary, setDiary] = useState("");
 
   // WEEK BUTTONS:🏀
   function handleWeekClick(event) {
@@ -20,23 +20,34 @@ function App() {
 
     let quizzInput = document.querySelector("#quizzInput");
     quizzInput.style.display = "flex";
-
     setWeek(event.target.id);
+    console.log(`User has clicked Week Number ${week}`);
 
     // HIGHLIGHTING BUTTON:
   }
 
-  useEffect(() => {
-    async function displayDiary() {
-      fetch(`http://localhost:3001/diary/${week}`)
-        .then((response) => response.json())
-        .then((data) => setDiaries(data))
-        .catch((err) => {
-          console.log("error: ", err);
-        });
+  // useEffect(() => {
+  //   async function displayDiary() {
+  //     fetch(`http://localhost:3001/diary/${week}`)
+  //       .then((response) => response.json())
+  //       .then((data) => setDiaries(data))
+  //       .catch((err) => {
+  //         console.log("error: ", err);
+  //       });
+  //   }
+  //   displayDiary();
+  // }, []);
+
+  async function getDiary() {
+    let response = await fetch(`http://localhost:3001/diary/${week}`);
+    let data = await response.json();
+    console.log(data);
+    if (data.payload[0] === undefined) {
+      setDiary(`Please submit an entry for week ${week}`);
+    } else {
+      setDiary(data.payload[0].diary);
     }
-    displayDiary();
-  }, []);
+  }
 
   async function submitDiary(e) {
     e.preventDefault();
@@ -52,26 +63,18 @@ function App() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log("data: >>>", data))
+      .then((data) => console.log("data: >>>", data.payload))
       .catch((err) => {
         console.log("error: ", err);
       });
   }
 
-  function handleDelete(id) {
-    const newList = diaries.filter((diary) => diary.id != id);
-    setDiaries(newList);
-    // delete req
-  }
-
   return (
     <div className="App">
       <TopHeader />
-
       <QuizzInput week={week} />
       <DiaryInput submitDiary={submitDiary}></DiaryInput>
-      {/* diaries && <DiaryList handleDelete={handleDelete} /> */}
-      {/* 🏀 */}
+      <DiaryDisplay week={week} diary={diary} getDiary={getDiary} />
       <EachWeek handleWeekClick={handleWeekClick} />
     </div>
   );
