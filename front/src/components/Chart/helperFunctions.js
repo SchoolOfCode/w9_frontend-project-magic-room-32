@@ -24,7 +24,7 @@ export function percentageCalc(arr) {
 
   let percentage = total*100/50;
 
-  console.log('percentage: >>>> ', percentage);
+  // console.log('percentage: >>>> ', percentage);
 
   return percentage;
 
@@ -41,8 +41,8 @@ export function buttonHighlight(num) {
   for(let i=1;i<=16;i++){
     allButtonIds.push(i) 
   }
-  console.log('allButton IDs: >>>>', allButtonIds);
-  console.log('butoon number clicked on: >>>>>>', num);
+  // console.log('allButton IDs: >>>>', allButtonIds);
+  // console.log('User Selected Week:', num);
 
 
   // let buttonToHighlight = document.querySelector(`#`+num);

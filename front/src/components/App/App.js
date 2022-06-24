@@ -81,9 +81,10 @@ function App() {
   async function getDiary() {
     let response = await fetch(`http://localhost:3001/diary/${week}`);
     let data = await response.json();
-    console.log(data);
+    console.log(`Diary Fetch Week: ${week}`);
     if (data.payload[0] === undefined) {
       setDiary(`Please submit an entry for week ${week}`);
+      console.log(`No Diary entry exists for Week: ${week}`)
     } else {
       setDiary(data.payload[0].diary);
     }
@@ -108,7 +109,7 @@ function App() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log("data: >>>", data.payload))
+      .then((data) => console.log(`Inserting DiaryText: "${inputValue}" for Week: ${week}`))
       .catch((err) => {
         console.log("error: ", err);
       });

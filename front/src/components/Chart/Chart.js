@@ -24,7 +24,7 @@ let percentage;
 
 export default function BarChart({weekNumber}) {
 
-    console.log('inside bar chart comp');
+    // console.log('inside bar chart comp');
 
     correctAll= getDataByWeekNumber(weekNumber, dataUser);
     percentage = percentageCalc(correctAll);
