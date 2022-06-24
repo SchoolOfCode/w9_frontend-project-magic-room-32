@@ -48,5 +48,8 @@ hr {
 
 
 
-
-
+/* 🏀 */
+#percentage {
+    font-weight: bold;
+    color: red;
+}

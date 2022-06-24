@@ -13,12 +13,7 @@ export default function EachWeek({ handleWeekClick }) {
   }
 
   // 🏀
-  // function handleWeekClick(event) {
-  //     let quizzInput= document.querySelector('#quizzInput');
-  //     quizzInput.style.display = 'flex';
-  //     console.log(event.target.id);
-  //     setWeekNumber(event.target.id);
-  // }
+
 
   return (
     <div>
@@ -26,12 +21,17 @@ export default function EachWeek({ handleWeekClick }) {
       <div id="EachWeek">
         {weeks.map((week, index) => {
           return (
-            <button className="week" id={index + 1} onClick={handleWeekClick}>
+            <button className="week" id={index + 1} onClick={handleWeekClick} key={index}>
               Week {week}
             </button>
           );
         })}
       </div>
+
+
+
+
+
       {/* <button onClick={() => Buttons} className="week1"> Week 1 </button>
         <button onClick={() => console.log("click")} className="week2"> Week 2 </button>
         <button className="week3"> Week 3 </button>
@@ -48,6 +48,10 @@ export default function EachWeek({ handleWeekClick }) {
         <button className="week14"> Week 14 </button>
         <button className="week15"> Week 15 </button>
         <button className="week16"> Week 16 </button> */}
+
+
+
+        
     </div>
   );
 }

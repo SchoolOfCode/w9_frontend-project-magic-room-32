@@ -165,6 +165,7 @@ export default function QuizzInput({ week }) {
         <div id="quizzNumberSelect">
           <input
             type="radio"
+            className="radio"
             value="1"
             id="1"
             name="quizzNumber"
@@ -174,6 +175,7 @@ export default function QuizzInput({ week }) {
 
           <input
             type="radio"
+            className="radio"
             value="2"
             id="2"
             name="quizzNumber"
@@ -183,6 +185,7 @@ export default function QuizzInput({ week }) {
 
           <input
             type="radio"
+            className="radio"
             value="3"
             id="3"
             name="quizzNumber"
@@ -192,25 +195,46 @@ export default function QuizzInput({ week }) {
 
           <input
             type="radio"
-            value="4"
-            id="4"
+            className="radio"
+            value="5"
+            id="5"
             name="quizzNumber"
             onChange={handleRadioChange}
           />
           <label for="quizzNumber">4</label>
+      
+
+
+
+
+
+
+
+
 
           <input
             type="radio"
+            className="radio"
             value="5"
             id="5"
             name="quizzNumber"
             onChange={handleRadioChange}
           />
           <label for="quizzNumber">5</label>
+
         </div>
       </p>
 
-      {/* <p>you selected quizz number:</p> */}
+
+
+
+
+
+
+
+
+
+
 
       {/* SLIDER selector:  */}
       <p>
