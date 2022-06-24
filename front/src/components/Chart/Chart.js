@@ -79,6 +79,8 @@ export default function BarChart({weekNumber}) {
 </div>
 <hr/>
 
+<p>percentage: </p>
+
 
 
 
