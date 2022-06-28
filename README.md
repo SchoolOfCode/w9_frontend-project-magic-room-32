@@ -49,10 +49,10 @@ If you would like to help out and contribute please feel free to create a fork o
 If you are having issues, please let us know.
 Feel free to contact any of the contributors below.
 
-[Jay Whittingham](https://github.com/jaymlwhittingham)
-[Samantha Wu](https://github.com/syywu)
-[Michael Paton](https://github.com/MP-360)
-[Lucy de Rojas](https://github.com/Lucy-de-Rojas)
+- [Jay Whittingham](https://github.com/jaymlwhittingham)
+- [Samantha Wu](https://github.com/syywu)
+- [Michael Paton](https://github.com/MP-360)
+- [Lucy de Rojas](https://github.com/Lucy-de-Rojas)
 
 <details>
 <summary> National Bootcamp - Week Nine Project Brief </summary>
