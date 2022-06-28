@@ -1,58 +1,35 @@
-
 #quizzInput {
-    text-align: center;
-    display: none;
-    align-items: center;
-    flex-direction: column;
+  text-align: center;
+  display: none;
+  align-items: center;
+  flex-direction: column;
 
-    align-items: center;
+  align-items: center;
 
-
-/* 
+  /* 
 
     display: flex;
  */
 
-
-
-    
-    width: 95%;
+  width: 95%;
 }
-
 
 #quizzNumberSelect {
-    /* display: none; */
-    align-items: center;
+  /* display: none; */
+  align-items: center;
 }
-
 
 #slider {
-    width: 30%;
-    align-items: center;
+  width: 30%;
+  align-items: center;
 }
-
-
-
-
-
-
 
 .boldFont {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: rgb(7, 215, 223);
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgb(7, 215, 223);
 }
 
-
-
-
-
-
-
-
-
-
 #quizzNumberSelect input {
-
-    margin-left: 20px;
+  margin-left: 20px;
 }

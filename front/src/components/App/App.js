@@ -10,7 +10,7 @@ import DiaryInput from "../Diary/Input";
 import DiaryDisplay from "../Diary/DiaryDisplay";
 
 // helper funcs:
-import { buttonHighlight } from '../Chart/helperFunctions.js';
+import { buttonHighlight } from "../Chart/helperFunctions.js";
 
 function App() {
   const [week, setWeek] = useState(0);
@@ -18,21 +18,20 @@ function App() {
 
   // WEEK BUTTONS to highlight:🏀
   function handleWeekClick(event) {
-
     // console.log('event target: >>>> ', typeof Number(event.target.id));
 
     buttonHighlight(event.target.id);
 
     // event.target.style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)';
     // document.querySelector(".week").style.background =
-      // "linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)";
+    // "linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)";
 
     let quizzInput = document.querySelector("#quizzInput");
     quizzInput.style.display = "flex";
-    setWeek(Number(event.target.id));    
+    setWeek(Number(event.target.id));
   }
 
-    // HIGHLIGHTING BUTTON:
+  // HIGHLIGHTING BUTTON:
 
   // useEffect(() => {
   //   async function displayDiary() {
@@ -52,7 +51,7 @@ function App() {
     console.log(`Diary Fetch Week: ${week}`);
     if (data.payload[0] === undefined) {
       setDiary(`Please submit an entry for week ${week}`);
-      console.log(`No Diary entry exists for Week: ${week}`)
+      console.log(`No Diary entry exists for Week: ${week}`);
     } else {
       setDiary(data.payload[0].diary);
     }
@@ -72,7 +71,9 @@ function App() {
       }),
     })
       .then((response) => response.json())
-      .then((data) => console.log(`Inserting DiaryText: "${inputValue}" for Week: ${week}`))
+      .then((data) =>
+        console.log(`Inserting DiaryText: "${inputValue}" for Week: ${week}`)
+      )
       .catch((err) => {
         console.log("error: ", err);
       });
@@ -80,7 +81,6 @@ function App() {
 
   return (
     <div className="App">
-       
       <Logo />
       <TopHeader />
       <QuizzInput week={week} />

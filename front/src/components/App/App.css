@@ -3,7 +3,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding-bottom: 100px;
-
 }
 
 .App {
@@ -16,19 +15,8 @@ body {
   align-items: center;
 }
 
-
-@media screen and (min-width: 1400px)  {
-  .App {   padding: 0 25%;}
+@media screen and (min-width: 1400px) {
+  .App {
+    padding: 0 25%;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
