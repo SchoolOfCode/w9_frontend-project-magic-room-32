@@ -2,10 +2,6 @@
 ## Getting Started
 How can we enhance the remote experience of a bootcamper? This was the problem at hand, the solution that we decided to come up with was a progress tracking app. That allows the user to track their progress through each week and see how they are getting on and in future to display various resources linked with areas they have struggled with. 
 
-SMALL CODE EXAMPLE
-
-(Include small code snippets with brief explanations)
-
 
 ![screenshot](Documenting%20our%20code-1.jpg)
 
@@ -56,7 +52,7 @@ Feel free to contact any of the contributors below.
 [Jay Whittingham] (https://github.com/jaymlwhittingham)
 [Samantha Wu] (https://github.com/syywu)
 [Michael Paton] (https://github.com/MP-360)
-[Lucy de Rojas] 
+[Lucy de Rojas] (https://github.com/Lucy-de-Rojas)
 
 
 
