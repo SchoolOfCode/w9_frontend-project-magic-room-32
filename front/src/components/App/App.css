@@ -4,38 +4,21 @@ body {
   box-sizing: border-box;
   padding-bottom: 100px;
 
-  
-
- 
 }
-
-
-
 
 .App {
   box-sizing: border-box;
-
   padding: 0;
   margin: 0;
   width: 100%;
-
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
-
-
-
-
 }
 
 
-
 @media screen and (min-width: 1400px)  {
-
   .App {   padding: 0 25%;}
-  
 }
 
 

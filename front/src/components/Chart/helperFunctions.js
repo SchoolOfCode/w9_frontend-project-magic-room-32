@@ -12,9 +12,6 @@ export function getDataByWeekNumber(weekNumber, data) {
   return resultCorrectOnes;
 }
 
-
-
-
 export function percentageCalc(arr) {
   let total = 0;
 
@@ -27,11 +24,7 @@ export function percentageCalc(arr) {
   // console.log('percentage: >>>> ', percentage);
 
   return percentage;
-
-
 }
-
-
 
 // highlights button clicked on
 export function buttonHighlight(num) {
@@ -52,14 +45,4 @@ export function buttonHighlight(num) {
   // let buttonsToReset = document.querySelector(`#${elem}}`);
   // buttonsToReset.style.background ='linear-gradient(to bottom, #6d6d6d 5%, #535353 100%)';
 
-
-
-
-
 }
-
-
-
-
-
-
