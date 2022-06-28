@@ -6,10 +6,10 @@ SMALL CODE EXAMPLE
 
 (Include small code snippets with brief explanations)
 
-![image of our app](/assets/images/image.jpg)
-(need to upload images to repo and provide relative path as above)	
 
+![screenshot](Documenting%20our%20code-1.jpg)
 
+![screenshot2](Documenting%20our%20code-2.png)
 
 
 Our app allows the user to input their daily quiz result for each week and calculates the average score in percentage. This enables the user to have a better understanding of their progress and to see whether extra studying is needed. In addition to this, there is a diary section which allows the user to submit their thoughts and feelings for that particular week.
@@ -20,7 +20,7 @@ Our app allows the user to input their daily quiz result for each week and calcu
 
 - `cd front/`
 - Run `npm i`
--`npm start`
+- `npm start`
 
 ** [Back-End] (https://github.com/SchoolOfCode/w9_backend-project-magic-room-32) **
 

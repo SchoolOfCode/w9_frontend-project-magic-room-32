@@ -1,23 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 
-
-
 function DiaryDisplay({ week, diary, getDiary }) {
   useEffect(() => {
     getDiary();
   }, [week]);
-
-
-
-
-
-
-
-
-
-
-
 
   return (
     <div>
@@ -25,17 +12,5 @@ function DiaryDisplay({ week, diary, getDiary }) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default DiaryDisplay;
