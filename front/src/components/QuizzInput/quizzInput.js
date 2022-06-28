@@ -8,7 +8,6 @@ export default function QuizzInput({ week }) {
 
   // number of quizz selected:
   const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
-
   const [correctAnswers, setCorrectAnswers] = useState(10);
 
   // radio button:  🏀✅
@@ -69,7 +68,6 @@ export default function QuizzInput({ week }) {
 
   return (
     <div id="quizzInput">
-      {/* 🏀 */}
       <BarChart weekNumber={week} />
 
       {/* QUIZZ NUMBER radio buttons */}
@@ -78,8 +76,6 @@ export default function QuizzInput({ week }) {
           {" "}
           {quizzNumberRadio ? weekdays[quizzNumberRadio - 1] : ""}
         </span>
-
-        {/* <button onClick={handleQuizzNumberSelect}> Select Number</button> */}
         <div id="quizzNumberSelect">
           <input
             type="radio"

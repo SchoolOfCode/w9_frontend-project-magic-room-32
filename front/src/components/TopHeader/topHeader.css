@@ -1,4 +1,3 @@
-
 #topHeader {
     width: 100%;
     padding-top: 10px;
@@ -9,23 +8,13 @@
     align-items: center;
 }
 
-
-
 #imgTopHeader {
     width: 95%;
-    margin: 0;
-
-
-    
+    margin: 0;   
 }
-
-
 
 @media screen and (min-width: 1400px)  {
     #topHeader {
         padding-top: 50px;
-
     }
-
 }
-
