@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+/* This function allows us to create a Diary input field for us to update the specific week.
+   Stores these entries for us to look back on. */
+
 const DiaryInput = ({ submitDiary }) => {
   const [text, setText] = useState("");
   return (
