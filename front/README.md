@@ -1,59 +1,70 @@
+# Getting Started with Create React App
 
-## Getting Started
-How can we enhance the remote experience of a bootcamper? This was the problem at hand, the solution that we decided to come up with was a progress tracking app. That allows the user to track their progress through each week and see how they are getting on and in future to display various resources linked with areas they have struggled with. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-SMALL CODE EXAMPLE
+## Available Scripts
 
-(Include small code snippets with brief explanations)
+In the project directory, you can run:
 
+### `npm start`
 
-![screenshot](Documenting%20our%20code-1.jpg)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-![screenshot2](Documenting%20our%20code-2.png)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
-Our app allows the user to input their daily quiz result for each week and calculates the average score in percentage. This enables the user to have a better understanding of their progress and to see whether extra studying is needed. In addition to this, there is a diary section which allows the user to submit their thoughts and feelings for that particular week.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# INSTALLATION INSTRUCTIONS 
+### `npm run build`
 
-** [Front-End] (https://github.com/SchoolOfCode/w9_frontend-project-magic-room-32) **
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- `cd front/`
-- Run `npm i`
-- `npm start`
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-** [Back-End] (https://github.com/SchoolOfCode/w9_backend-project-magic-room-32) **
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Run `npm i`.
-- Create a .env file at the top-level.
-- Configure the file using the following Postgresql variables and your server’s relevant settings:
-```
-PGHOST 
-PGUSER 
-PGDATABASE 
-PGPASSWORD
-PGPORT 
-PORT
-```
-- Ensure that the ‘PORT’ is set to something other than the front-end. By default, the front-end is configured to use 3000. We would suggest setting the back-end to listen on 3001.
-- Use the following command for first-time setup: `npm run setUpTables`.
-- Run `npm start`.
+### `npm run eject`
 
-Once you have both of these up and running you may go to your browser and go to “localhost:3000” to view our application. 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# HOW TO CONTRIBUTE
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-If you would like to help out and contribute please feel free to create a fork of our repositories using the links below.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-[Frontend] (https://github.com/SchoolOfCode/w9_frontend-project-magic-room-32/fork)
-[Backend] (https://github.com/SchoolOfCode/w9_backend-project-magic-room-32/fork)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-# SUPPORT
+## Learn More
 
-If you are having issues, please let us know.
-Feel free to contact any of the contributors below.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-[Jay Whittingham] (https://github.com/jaymlwhittingham)
-[Samantha Wu] (https://github.com/syywu)
-[Michael Paton] (https://github.com/MP-360)
-[Lucy de Rojas] 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
