@@ -1,8 +1,8 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { dataUser } from "./dataChart.js";
-import { getDataByWeekNumber } from "./helperFunctions.js";
-import { percentageCalc } from "./helperFunctions.js";
+import { getDataByWeekNumber } from "../../HelperFunction/helperFunctions.js";
+import { percentageCalc } from "../../HelperFunction/helperFunctions.js";
 
 // to store correct per week in ARRAY:
 
