@@ -40,6 +40,7 @@ Once you have both of these up and running you may go to your browser and go to 
 ## How To Contribute
 
 If you would like to help out and contribute please feel free to create a fork of our repositories using the links below.
+Within the front end you shall see a fodler called Drafts. This currently has sections of code that currently never used. However could come in handy later when adding in new features.
 
 [Frontend](https://github.com/SchoolOfCode/w9_frontend-project-magic-room-32/fork)
 [Backend](https://github.com/SchoolOfCode/w9_backend-project-magic-room-32/fork)
@@ -55,6 +56,8 @@ Feel free to contact any of the contributors below.
 - [Lucy de Rojas](https://github.com/Lucy-de-Rojas)
 
 <details>
+
+
 <summary> National Bootcamp - Week Nine Project Brief </summary>
 
 For your project, you’ll be using what you’ve learned on the course so far to try and improve the lives of your users. In this case, the users will be close to home: bootcampers!
