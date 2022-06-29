@@ -12,11 +12,8 @@ export default function EachWeek({ handleWeekClick }) {
     weeks.push(i);
   }
 
-  // 🏀
-
   return (
     <div>
-      {/* <h1>Week:  {weekNumber}</h1> */}
       <div id="EachWeek">
         {weeks.map((week, index) => {
           return (
@@ -24,8 +21,7 @@ export default function EachWeek({ handleWeekClick }) {
               className="week"
               id={index + 1}
               onClick={handleWeekClick}
-              key={index}
-            >
+              key={index}>
               Week {week}
             </button>
           );
