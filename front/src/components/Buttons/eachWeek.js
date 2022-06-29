@@ -1,12 +1,8 @@
 import React from "react";
 import "./buttons.css";
 
-import { useState } from "react";
-
 // component:
 export default function EachWeek({ handleWeekClick }) {
-  const [weekNumber, setWeekNumber] = useState("None");
-
   let weeks = [];
   for (let i = 1; i <= 16; i++) {
     weeks.push(i);
@@ -21,7 +17,8 @@ export default function EachWeek({ handleWeekClick }) {
               className="week"
               id={index + 1}
               onClick={handleWeekClick}
-              key={index}>
+              key={index}
+            >
               Week {week}
             </button>
           );
