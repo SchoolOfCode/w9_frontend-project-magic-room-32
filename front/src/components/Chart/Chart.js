@@ -7,53 +7,42 @@ import { dataUser } from "./dataChart.js";
 
 // helper functions:
 import { getDataByWeekNumber } from "./helperFunctions.js";
-import { percentageCalc } from './helperFunctions.js';
+import { percentageCalc } from "./helperFunctions.js";
 
 // to store correct per week in ARRAY:
 
-let correctAll ;
+let correctAll;
 let percentage;
 
-export default function BarChart({weekNumber}) {
+export default function BarChart({ weekNumber }) {
+  correctAll = getDataByWeekNumber(weekNumber, dataUser);
+  percentage = percentageCalc(correctAll);
+  let daysInWek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-    // console.log('inside bar chart comp');
+  // bring in the helper function to get data per week based on week selected
 
-    correctAll= getDataByWeekNumber(weekNumber, dataUser);
-    percentage = percentageCalc(correctAll);
+  return (
+    <div>
+      <div id="chart">
+        <h1>Quiz results for Week {weekNumber}</h1>
+        <Bar
+          data={{
+            labels: daysInWek,
+            datasets: [
+              {
+                label: "Weekly Quiz Results",
+                data: correctAll,
+              },
+            ],
+          }}
+        />
+      </div>
+      <hr />
 
-    // ✅
-    let daysInWek = ['Monday', 'Tuesday','Wednesday','Thursday','Friday'];
- 
-    // 🏀
-// bring in the helper function to get data per week based on week selected
-
-    return (<div>
-
-<div id='chart'>
-
-<h1>Quiz results for Week {weekNumber}</h1>
-
-    <Bar 
-        data ={
-            {
-                labels: daysInWek, 
-                datasets: [{
-                    label: 'Weekly Quiz Results',
-                    data: correctAll
-                }]
-                }
-                }
-    />
-
-</div>
-<hr/>
-
-<p>Percentage: <span id='percentage'>
- {
-    percentage
+      <p>
+        Percentage: <span id="percentage">{percentage}</span>
+      </p>
+      <hr />
+    </div>
+  );
 }
-</span>
- </p>
-<hr />
-    </div>)
-            }

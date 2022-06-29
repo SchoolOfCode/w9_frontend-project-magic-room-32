@@ -38,7 +38,7 @@ export default function QuizzInput({ week }) {
     setQuizzNumberRadio(event.target.id);
   }
 
-  // submitting results: 🏀
+  // submitting results:
   async function submitResults() {
     console.log("week selected: >>>>> inside quizzInput", week);
     console.log("quiz number radio on submit: >>> ", quizzNumberRadio);
@@ -63,7 +63,6 @@ export default function QuizzInput({ week }) {
       });
 
     let quizzInput = document.querySelector("#quizzInput");
-    // quizzInput.style.display = 'none';
   }
 
   return (

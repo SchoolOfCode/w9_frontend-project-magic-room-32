@@ -6,19 +6,14 @@
 }
 
 #chartContainer {
-
     display: flex;
     flex-direction: row;
-
- 
 }
 
 #chartMainContainer {
     display: flex;
     flex-direction: column;
-
     align-items: center;
-
 }
 
 hr {
@@ -30,7 +25,6 @@ hr {
     width: 80%;
 }
 
-/* 🏀 */
 #percentage {
     font-weight: bold;
     color: red;

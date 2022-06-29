@@ -18,8 +18,6 @@ function App() {
 
   // WEEK BUTTONS to highlight:🏀
   function handleWeekClick(event) {
-    // console.log('event target: >>>> ', typeof Number(event.target.id));
-
     buttonHighlight(event.target.id);
 
     // event.target.style.background = 'linear-gradient(to bottom, rgb(206, 1, 233) 5%, #80006e 100%)';
@@ -30,20 +28,6 @@ function App() {
     quizzInput.style.display = "flex";
     setWeek(Number(event.target.id));
   }
-
-  // HIGHLIGHTING BUTTON:
-
-  // useEffect(() => {
-  //   async function displayDiary() {
-  //     fetch(`http://localhost:3001/diary/${week}`)
-  //       .then((response) => response.json())
-  //       .then((data) => setDiaries(data))
-  //       .catch((err) => {
-  //         console.log("error: ", err);
-  //       });
-  //   }
-  //   displayDiary();
-  // }, []);
 
   async function getDiary() {
     let response = await fetch(`http://localhost:3001/diary/${week}`);
