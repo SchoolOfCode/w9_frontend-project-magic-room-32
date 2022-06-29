@@ -4,8 +4,8 @@ const DiaryInput = ({ submitDiary }) => {
   const [text, setText] = useState("");
   return (
     <div className="diary-list">
+      <label>My Diary
       <form onSubmit={submitDiary}>
-        <label>My Diary</label>
         <input
           id="input-diary"
           type="text"
@@ -17,6 +17,7 @@ const DiaryInput = ({ submitDiary }) => {
         />
         <button type="submit">Submit</button>
       </form>
+      </label>
     </div>
   );
 };

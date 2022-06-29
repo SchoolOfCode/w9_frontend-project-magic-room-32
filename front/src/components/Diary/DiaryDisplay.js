@@ -7,8 +7,8 @@ function DiaryDisplay({ week, diary, getDiary }) {
   }, [week]);
 
   return (
-    <div>
-      <p>"{diary}"</p>
+    <div className = "diaryEntry" role="article">
+      <p role="paragraph">"{diary}"</p>
     </div>
   );
 }
