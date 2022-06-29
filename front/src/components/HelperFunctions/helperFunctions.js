@@ -14,7 +14,7 @@ export function percentageCalc(arr) {
   let total = 0;
 
   arr.map((elem) => {
-    total = total + elem;
+    return total = total + elem;
   });
   let percentage = (total * 100) / 50;
   return percentage;

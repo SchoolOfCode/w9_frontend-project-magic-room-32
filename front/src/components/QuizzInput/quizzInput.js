@@ -6,7 +6,6 @@ export default function QuizzInput({ week }) {
   let weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
   // number of quizz selected:
-  const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
   const [correctAnswers, setCorrectAnswers] = useState(10);
 
   // radio button:  
@@ -20,17 +19,7 @@ export default function QuizzInput({ week }) {
   }
 
   // handle quizz number selection:
-  function handleQuizzNumberSelect() {
-    let dropDownQuizzSelect = document.querySelector("#quizzNumberSelect");
 
-    if (quizzNumberSelected) {
-      setQuizzNumberSelected(false);
-      dropDownQuizzSelect.style.display = "block";
-    } else {
-      setQuizzNumberSelected(true);
-      dropDownQuizzSelect.style.display = "none";
-    }
-  }
   function handleRadioChange(event) {
     setQuizzNumberRadio(event.target.id);
   }
@@ -58,8 +47,6 @@ export default function QuizzInput({ week }) {
       .catch((err) => {
         console.log("error: ", err);
       });
-
-    let quizzInput = document.querySelector("#quizzInput");
   }
 
   return (
