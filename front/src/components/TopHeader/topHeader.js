@@ -1,8 +1,9 @@
 import "./topHeader.css";
 import animatedTopHeader from "../TopHeader/media/FinalCut/TopHeaderBLANK.gif";
 
-// Function purely to display the animated header at the top of the page.
-// Visual purposes
+/* FUNCTION PURELY TO DISPLAY THE ANIMATED HEADER AT THE TOP OF THE PAGE.
+   VISUAL PURPOSES ONLY.  */
+   
 export default function TopHeader() {
   return (
     <div id="topHeader">

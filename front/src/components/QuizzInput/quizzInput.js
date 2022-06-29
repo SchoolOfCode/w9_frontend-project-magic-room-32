@@ -1,6 +1,5 @@
 import "./quizzInput.css";
 import { useState } from "react";
-
 import BarChart from "../Chart/Chart";
 
 export default function QuizzInput({ week }) {
@@ -10,7 +9,7 @@ export default function QuizzInput({ week }) {
   const [quizzNumberSelected, setQuizzNumberSelected] = useState(true);
   const [correctAnswers, setCorrectAnswers] = useState(10);
 
-  // radio button:  🏀✅
+  // radio button:  
   const [quizzNumberRadio, setQuizzNumberRadio] = useState(1);
 
   // handle SLIDER change:
@@ -20,7 +19,7 @@ export default function QuizzInput({ week }) {
     setCorrectAnswers(sliderValue);
   }
 
-  // handle quizz number selection
+  // handle quizz number selection:
   function handleQuizzNumberSelect() {
     let dropDownQuizzSelect = document.querySelector("#quizzNumberSelect");
 
@@ -32,8 +31,6 @@ export default function QuizzInput({ week }) {
       dropDownQuizzSelect.style.display = "none";
     }
   }
-
-  // 🏀✅
   function handleRadioChange(event) {
     setQuizzNumberRadio(event.target.id);
   }

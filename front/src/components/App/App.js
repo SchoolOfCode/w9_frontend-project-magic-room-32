@@ -1,15 +1,11 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-
-// components:
 import Logo from "../logo/Logo";
 import TopHeader from "../TopHeader/topHeader";
 import QuizzInput from "../QuizzInput/quizzInput";
 import EachWeek from "../Buttons/eachWeek";
 import DiaryInput from "../Diary/Input";
 import DiaryDisplay from "../Diary/DiaryDisplay";
-
-// helper funcs:
 import { buttonHighlight } from "../Chart/helperFunctions.js";
 
 function App() {

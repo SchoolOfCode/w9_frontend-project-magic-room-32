@@ -1,6 +1,6 @@
 export function getDataByWeekNumber(weekNumber, data) {
   let result = data.filter((elem) => {
-    return elem.weekNumber == weekNumber;
+    return elem.weekNumber === weekNumber;
   });
 
   let resultCorrectOnes = result.map((elem) => {
