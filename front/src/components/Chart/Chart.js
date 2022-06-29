@@ -1,8 +1,10 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { dataUser } from "./dataChart.js";
-import { getDataByWeekNumber } from "../../HelperFunctions/helperFunctions.js";
-import { percentageCalc } from "../../HelperFunctions/helperFunctions.js";
+import { getDataByWeekNumber } from "../HelperFunctions/helperFunctions.js";
+import { percentageCalc } from "../HelperFunctions/helperFunctions.js";
+import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart }            from 'react-chartjs-2'
 
 // to store correct per week in ARRAY:
 

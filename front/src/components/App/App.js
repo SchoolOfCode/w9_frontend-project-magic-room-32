@@ -6,7 +6,7 @@ import QuizzInput from "../QuizzInput/quizzInput";
 import EachWeek from "../Buttons/eachWeek";
 import DiaryInput from "../Diary/Input";
 import DiaryDisplay from "../Diary/DiaryDisplay";
-import { buttonHighlight } from "../../HelperFunctions/helperFunctions.js";
+import { buttonHighlight } from "../HelperFunctions/helperFunctions.js";
 
 function App() {
   const [week, setWeek] = useState(0);
